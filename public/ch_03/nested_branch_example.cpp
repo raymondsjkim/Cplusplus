@@ -6,11 +6,12 @@ using namespace std;
 
 int main()
 {
-	const double RATE1 = 0.10;
-	const double RATE2 = 0.25;
+	const double RATE1 = 0.10; // tax for single under $32,000, married under $64,000
+	const double RATE2 = 0.25; // tax for single over $32,000, married over $64,000
 	const double RATE1_SINGLE_LIMIT = 32000;
 	const double RATE1_MARRIED_LIMIT = 64000;
 
+	/* Good code practice to initialize variables. */
 	double tax1 = 0;
 	double tax2 = 0;
 
@@ -26,7 +27,7 @@ int main()
 	{
 		if(income <= RATE1_SINGLE_LIMIT)
 		{
-			tax1 = RATE1 * income;
+			tax1 = RATE1 * income; 
 		}
 		else
 		{
