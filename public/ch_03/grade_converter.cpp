@@ -1,7 +1,3 @@
-// ConsoleApplication8.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 
@@ -12,7 +8,7 @@ int main()
 	double num_grade = 0;
 	string letter_grade;
 
-	cout << "Enter a letter grade: ";
+	cout << "Enter a valid letter grade (Example: A+) : ";
 	cin >> letter_grade;
 
 	if (letter_grade == "A+")
@@ -87,13 +83,13 @@ int main()
 												}
 												else
 												{
-													if(letter_grade == "F")
+													if (letter_grade == "F")
 													{
 														num_grade = 0;
 													}
 													else
 													{
-														cout << "ERROR ERROR ERROR" << endl;
+														cout << "Error: Not a valid letter grade." << endl;
 													}
 												}
 											}
@@ -107,8 +103,10 @@ int main()
 			}
 		}
 	}
+
 	cout << "You number grade is: " << num_grade << endl;
 	system("pause");
 	return 0;
-}
 
+
+}
