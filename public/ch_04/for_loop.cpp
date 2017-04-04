@@ -6,11 +6,9 @@ using namespace std;
 
 int main()
 {
-
 	const double RATE = 5;
 	const double INITIAL_BALANCE = 10000;
 	double balance = INITIAL_BALANCE;
-
 	int nyears;
 
 	cout << "Enter number of years: ";
