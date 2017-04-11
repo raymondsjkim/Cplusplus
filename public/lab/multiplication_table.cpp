@@ -8,7 +8,6 @@ but (note: nested for loop) For mult is 1 and is less than or equal to MAX, incr
 while multiplying mult * r (calculate and print the multiplaction table).
 Output Variable: Multiplication table
 */
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
