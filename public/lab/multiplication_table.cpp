@@ -18,7 +18,6 @@ using namespace std;
 int main()
 {
 	const int MAX = 10;
-
 	// Print header row.
 	for (int i = 1; i <= MAX; i++) {
 		cout << setw(4) << i << setw(4);
