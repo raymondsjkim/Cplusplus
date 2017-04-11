@@ -1,10 +1,10 @@
 /*
 Description: This program prints a multiplication table.
 Author: Raymond Kim
-Input Variables: a) head_max b) row_max c) i d) r
-Process Flow: For i is 1 and is less than or equal to head_max, increment by one (prints header row).
-For r is 2 and is less than or equal to row_max, increment by 1 (prints first column) 
-but (note: nested for loop) For mult is 1 and is less than or equal to row_max, increment by 1 
+Input Variables: a) MAX b) i c) r d) mult
+Process Flow: For i is 1 and is less than or equal to MAX, increment by one (prints header row).
+For r is 2 and is less than or equal to MAX, increment by 1 (prints first column) 
+but (note: nested for loop) For mult is 1 and is less than or equal to MAX, increment by 1 
 while multiplying mult * r (calculate and print the multiplaction table).
 Output Variable: Multiplication table
 */
