@@ -26,6 +26,7 @@ int main()
 		sum = sum + variable;
 	}
 	
+	// fix avg
 	avg = max / min;
 
 	cout << "Max: " << max << endl;
