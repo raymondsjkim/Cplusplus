@@ -11,6 +11,9 @@ int main()
 
 	cout << "Enter values: ";
 	double values;
+	
+	// http://stackoverflow.com/questions/7425318/multiple-inputs-on-one-line
+	
 	while(cin >> values) 
 	{
 		if(cin.fail()) {
