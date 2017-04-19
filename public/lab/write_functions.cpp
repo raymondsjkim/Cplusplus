@@ -12,8 +12,18 @@ using namespace std;
 */
 double sphere_volume(double r) {
 	const double PI = M_PI;
-	double volume = 4.0 / 3 * PI * pow(r,3);
-	return volume;
+	double sphere_vol = 4.0 / 3 * PI * pow(r,3);
+	return sphere_vol;
+}
+/**
+Computes the surface area of a sphere.
+@param r is the radius of the sphere.
+@return the sphere_area
+*/
+double sphere_surface(double r) {
+	const double PI = M_PI;
+	double sphere_area = 4 * PI * pow(r, 2);
+	return sphere_area;
 }
 
 int main()
