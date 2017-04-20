@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void withdraw(double& balance, double amount) { // the & triggers to change in the account
+void withdraw(double& balance, double amount) { // & indicates a reference parameter (updates the balance)
 	const double PENALTY = 10;
 	if(balance >= amount) {
 		balance = balance - amount;
