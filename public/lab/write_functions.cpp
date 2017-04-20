@@ -25,7 +25,6 @@ double sphere_surface(double r) {
 	double sphere_area = 4 * PI * pow(r, 2);
 	return sphere_area;
 }
-
 /**
 Computes the volume of a cylinder.
 @param r and h. r is radius h is height.
@@ -36,6 +35,17 @@ double cylinder_volume(double r, double h) {
 	double cyl_vol = PI * pow(r, 2) * h;
 	return cyl_vol;
 }
+/**
+Computes the surface area of a cylinder.
+@param r and h. r is radius h is height.
+@return cyl_area
+*/
+double cylinder_surface(double r, double h) {
+	const double PI = M_PI;
+	double cyl_area = (2 * PI * r * h) + (2 * PI * pow(r, 2));
+	return cyl_area;
+}
+
 
 int main()
 {
@@ -48,6 +58,7 @@ int main()
 	cout << "Volume of the sphere is: " << sphere_volume(radius) << endl;
 	cout << "Surface area of the sphere is: " << sphere_surface(radius) << endl;
 	cout << "Volume of the cylinder is: " << cylinder_volume(radius, height) << endl;
+	cout << "Surface area of the cylinder is: " << cylinder_surface(radius, height) << endl;
 
 	system("pause");
 	return 0;
