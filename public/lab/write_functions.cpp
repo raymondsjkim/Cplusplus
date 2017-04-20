@@ -43,8 +43,8 @@ int main()
 		<< " ";
 	double radius;
 	double height;
-	cin >> radius;
-	cin >> height;
+	cin >> radius >> height;
+	
 	cout << "Volume of the sphere is: " << sphere_volume(radius) << endl;
 	cout << "Surface area of the sphere is: " << sphere_surface(radius) << endl;
 	cout << "Volume of the cylinder is: " << cylinder_volume(radius, height) << endl;
