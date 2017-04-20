@@ -45,8 +45,16 @@ double cylinder_surface(double r, double h) {
 	double cyl_area = (2 * PI * r * h) + (2 * PI * pow(r, 2));
 	return cyl_area;
 }
-
-
+/**
+Computes the volume of a cone.
+@param r and h. r is radius h is height.
+@return cone_vol
+*/
+double cone_volume(double r, double h) {
+	const double PI = M_PI;
+	double cone_vol = PI * pow(r,2) * (h / 3);
+	return cone_vol;
+}
 int main()
 {
 	cout << "Enter values for radius and height and hit enter \nkey to execute the program (example: 2 4; r=2 & h=4): "
@@ -59,6 +67,7 @@ int main()
 	cout << "Surface area of the sphere is: " << sphere_surface(radius) << endl;
 	cout << "Volume of the cylinder is: " << cylinder_volume(radius, height) << endl;
 	cout << "Surface area of the cylinder is: " << cylinder_surface(radius, height) << endl;
+	cout << "Volume of the cone is: " << cone_volume(radius, height) << endl;
 
 	system("pause");
 	return 0;
