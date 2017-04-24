@@ -84,7 +84,7 @@ int main()
 	cout << "Surface area of the cylinder is: " << cylinder_surface(radius, height) << endl;
 	cout << endl;
 	cout << "Volume of the cone is: " << cone_volume(radius, height) << endl;
-	cout << "Surface area of the cone is: " << cone_volume(radius, height) << endl;
+	cout << "Surface area of the cone is: " << cone_surface(radius, height) << endl;
 
 	system("pause");
 	return 0;
