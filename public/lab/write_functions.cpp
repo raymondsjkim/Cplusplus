@@ -1,12 +1,3 @@
-/*
-Description: This programs computes the volume and surface area of a sphere, cylinder, and a cone.
-Author: Raymond Kim
-Input Variables: a) radius b) height 
-Process Flow: User inputs radius and height.
-			  Pass input into each formula function,
-			  Output calculated results for each formula.
-Output Variables: Volume and surface area of sphere, cylinder, and cone.
-*/
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -62,7 +53,7 @@ Computes the volume of a cone.
 */
 double cone_volume(double r, double h) {
 	const double PI = M_PI;
-	double cone_vol = PI * pow(r,2) * (h / 3);
+	double cone_vol = PI * pow(r, 2) * (h / 3);
 	return cone_vol;
 }
 /**
@@ -78,11 +69,13 @@ double cone_surface(double r, double h) {
 int main()
 {
 	cout << "Volume and Surface Area Formula's" << endl;
-	cout << "Enter values for radius and height and hit enter \nkey to execute the program (example: 2 4; r=2 & h=4): ";
+	cout << endl;
+	cout << "Enter a value for radius: ";
 	double radius;
+	cin >> radius;
+	cout << "Enter a value for height: ";
 	double height;
-	cin >> radius >> height;
-	
+	cin >> height;
 	cout << endl;
 	cout << "Volume of the sphere is: " << sphere_volume(radius) << endl;
 	cout << "Surface area of the sphere is: " << sphere_surface(radius) << endl;
