@@ -1,3 +1,15 @@
+/*
+Description:
+
+Author:
+
+Input Variables:
+
+Process Flow:
+
+Output Variables:
+*/
+#include "stdafx.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
