@@ -2,10 +2,10 @@
 Description: This program calculates the volume and surface area of a sphere, cylinder, and cone.
 Author: Raymond Kim
 Input Variables: PI, r, h, volume_sphere, sphere_area, cyl_volume, cyl_area, cone_vol, cone_area, radius, height
-Process Flow:
-Output Variables:
+Process Flow: Set up functions that calculate the volume and surface area for each case.
+Prompt user to enter value for radius and height. Pass the values as arguments into each function to calculate.
+Output Variables: Calculation from each formula.
 */
-#include "stdafx.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
