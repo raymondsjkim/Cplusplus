@@ -1,12 +1,8 @@
 /*
-Description:
-
-Author:
-
-Input Variables:
-
+Description: This program calculates the volume and surface area of a sphere, cylinder, and cone.
+Author: Raymond Kim
+Input Variables: PI, r, h, volume_sphere, sphere_area, cylinder_volume
 Process Flow:
-
 Output Variables:
 */
 #include "stdafx.h"
@@ -18,13 +14,13 @@ Output Variables:
 
 using namespace std;
 
+const double PI = M_PI; // Global variable for pi
 /**
 Computes the volume of a sphere.
 @param r is the radius of the sphere.
 @return the volume_sphere
 */
 double sphere_volume(double r) {
-	const double PI = M_PI;
 	double volume_sphere = 4.0 / 3 * PI * pow(r, 3);
 	return volume_sphere;
 }
@@ -34,7 +30,6 @@ Computes the surface area of a sphere.
 @return the sphere_area
 */
 double sphere_surface(double r) {
-	const double PI = M_PI;
 	double sphere_area = 4 * PI * pow(r, 2);
 	return sphere_area;
 }
@@ -44,7 +39,6 @@ Computes the volume of a cylinder.
 @return cyl_vol
 */
 double cylinder_volume(double r, double h) {
-	const double PI = M_PI;
 	double cyl_vol = PI * pow(r, 2) * h;
 	return cyl_vol;
 }
@@ -54,7 +48,6 @@ Computes the surface area of a cylinder.
 @return cyl_area
 */
 double cylinder_surface(double r, double h) {
-	const double PI = M_PI;
 	double cyl_area = (2 * PI * r * h) + (2 * PI * pow(r, 2));
 	return cyl_area;
 }
@@ -64,7 +57,6 @@ Computes the volume of a cone.
 @return cone_vol
 */
 double cone_volume(double r, double h) {
-	const double PI = M_PI;
 	double cone_vol = PI * pow(r, 2) * (h / 3);
 	return cone_vol;
 }
@@ -74,7 +66,6 @@ Computes surface area of a cone.
 @return cone_vol
 */
 double cone_surface(double r, double h) {
-	const double PI = M_PI;
 	double cone_vol = PI * r * (r + sqrt(h * h + r * r));
 	return cone_vol;
 }
