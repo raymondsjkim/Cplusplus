@@ -8,7 +8,9 @@ Call sort2() function with number value.
 If a > b swap a and b, others keep it the same.
 Output Variables: Output that is the same and output that has been swapped.
 */
+#include "stdafx.h"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 /**
@@ -19,10 +21,10 @@ Swaps a and b if a > b, otherwise leave same
 void sort2(int& a, int& b)
 {
 	int swap = a; // initial a
-	/* 
-		swap if a > b 
-	*/
-	if (swap > b) 
+				  /*
+				  swap if a > b
+				  */
+	if (swap > b)
 	{
 		a = b; // swap a to b
 		b = swap; // swap b to intial a
@@ -36,8 +38,11 @@ int main()
 	int x = 1;
 	sort2(u, v); // stay (2,3)
 	sort2(w, x); // swap to (1,4)
+	cout << setw(10) << "Swap x and y Values (x, y) if x > y:" << endl;
+	cout << endl;
 	cout << "u is still " << u << ", " << "v is stil " << v << endl;
 	cout << "w is now " << w << ", " << "x is now " << x << endl;
+	cout << endl;
 
 	system("pause");
 	return 0;
