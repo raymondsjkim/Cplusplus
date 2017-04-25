@@ -20,9 +20,7 @@ Swaps a and b if a > b, otherwise leave same
 void sort2(int& a, int& b)
 {
 	int swap = a; // initial a
-				  /*
-				  swap if a > b
-				  */
+	/* swap if a > b */
 	if (swap > b)
 	{
 		a = b; // swap a to b
@@ -37,7 +35,8 @@ int main()
 	int x;
 	int y;
 	cin >> x >> y;
-	if (x > y) {
+	if (x > y) 
+	{
 		sort2(x, y); // swap 
 		cout << "x is now " << x << ", " << "y is now " << y << endl;
 	}
