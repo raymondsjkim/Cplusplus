@@ -1,7 +1,7 @@
 /*
 Description: This program calculates the volume and surface area of a sphere, cylinder, and cone.
 Author: Raymond Kim
-Input Variables: PI, r, h, volume_sphere, sphere_area, cylinder_volume
+Input Variables: PI, r, h, volume_sphere, sphere_area, cyl_volume, cyl_area, cone_vol, cone_area, radius, height
 Process Flow:
 Output Variables:
 */
@@ -63,11 +63,11 @@ double cone_volume(double r, double h) {
 /**
 Computes surface area of a cone.
 @param r and h. r is radius h is height.
-@return cone_vol
+@return cone_area
 */
 double cone_surface(double r, double h) {
-	double cone_vol = PI * r * (r + sqrt(h * h + r * r));
-	return cone_vol;
+	double cone_area = PI * r * (r + sqrt(h * h + r * r));
+	return cone_area;
 }
 int main()
 {
