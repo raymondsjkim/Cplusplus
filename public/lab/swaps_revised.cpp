@@ -4,8 +4,8 @@ Description: This functions swaps the values
 Author: Raymond Kim
 Input Variables: a, b, swap, x, y
 Process Flow: Set up function void sort2() with reference parameters a and b.
-			  Prompt user for x and y.	
-			  If x > y swap a and b in sort2(), otherwise keep it the same.
+	      Prompt user for x and y.	
+	      If x > y swap a and b in sort2(), otherwise keep it the same.
 Output Variables: Output with same values or output with swapped values.
 */
 #include <iostream>
