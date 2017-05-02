@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm> // include this to sort
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -12,9 +12,9 @@ int main()
 
 	for(int i = 1;i < current_size; i++)
 	{
-		cout << values[i];
-		cout << endl;
+		cout << values[i] << " ";
 	}
+	cout << endl;
 
 	system("pause");
     return 0;
