@@ -5,7 +5,7 @@ using namespace std;
 int read_inputs(double inputs[], int capacity) 
 {
 	int current_size = 0;
-	cout << "Please eneter values, Q to exit: " << endl;
+	cout << "Please eneter values, Q to exit: ";
 	bool more = true;
 	while(more)
 	{
@@ -41,8 +41,11 @@ int main()
 	const int CAPACITY = 1000;
 	double values[CAPACITY];
 	int size = read_inputs(values, CAPACITY);
+	cout << endl;
 	minimum(values, size);
+	cout << endl;
 
 	system("pause");
 	return 0;
 }
+
