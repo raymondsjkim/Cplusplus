@@ -1,12 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/**
-Reads a sequence of floating-point numbers
-@param inputs an array containing the numbers
-@param capacity the capacity of that array
-@return the number of inputs stored in array
-*/
+/*	read  the inputs in the array and find the current size of the array	*/
 int read_inputs(double inputs[], int capacity) 
 {
 	int current_size = 0;
@@ -25,38 +20,20 @@ int read_inputs(double inputs[], int capacity)
 			inputs[current_size] = input;
 			current_size++;
 		}
-		return current_size;
 	}
+	return current_size;
 }
-/**
-Multiplies all elements of an array by a factor,
-@param values a partially filled array
-@param size the number of elements in values
-@param factor the value with which each element is multiplied
-*/
-void multiply(double values[], int size, double factor)
-{
+/*	Find the minimum value in array	*/
+void minimum(double inputs[], int size) {
+	double minimum = inputs[0];
 	for(int i = 0; i < size; i++)
 	{
-		values[i] = values[i] * factor;
-	}
-}
-/**
-Prints the elements of a vector, seperated by commas
-@param values a partially filled array
-@param size the number of elements in values
-*/
-void print(double values[], int size) 
-{
-	for(int i = 0; i < size; i++) 
-	{
-		if(i > 0)
+		if(inputs[i] < minimum)
 		{
-			cout << ", ";
+			minimum = inputs[i];
 		}
-		cout << values[i];
 	}
-	cout << endl;
+	cout << "The minimum value in the array " << minimum << endl;
 }
 
 int main()
@@ -64,8 +41,7 @@ int main()
 	const int CAPACITY = 1000;
 	double values[CAPACITY];
 	int size = read_inputs(values, CAPACITY);
-	multiply(values, size, 2);
-	print(values, size);
+	minimum(values, size);
 
 	system("pause");
 	return 0;
