@@ -8,14 +8,18 @@ int main()
 	double values2[] = {1,2,4};
 	double values3[] = {3,2,1};
 	double values4[] = {4,5,6};
-	bool test = false;
-	bool test1 = false;
+	bool test;
+	bool test1;
 
 	for(int i = 0; i < MAX; i++)
 	{
 		if(values1[i] == values2[i])
 		{
 			test = true;
+		}
+		else
+		{
+			test = false;
 		}
 	}
 	cout << test << endl;
