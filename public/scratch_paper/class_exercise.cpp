@@ -24,7 +24,7 @@ int read_inputs(double inputs[], int capacity)
 	return current_size;
 }
 /*	Find the minimum value in array	*/
-void minimum(double inputs[], int size) {
+int minimum(double inputs[], int size) {
 	double minimum = inputs[0];
 	for(int i = 0; i < size; i++)
 	{
@@ -33,7 +33,7 @@ void minimum(double inputs[], int size) {
 			minimum = inputs[i];
 		}
 	}
-	cout << "The minimum value in the array " << minimum << endl;
+	return minimum;
 }
 
 int main()
@@ -41,11 +41,12 @@ int main()
 	const int CAPACITY = 1000;
 	double values[CAPACITY];
 	int size = read_inputs(values, CAPACITY);
+	int min = minimum(values, size);
+	
 	cout << endl;
-	minimum(values, size);
+	cout << "The minimum value in the array " << min << endl;
 	cout << endl;
 
 	system("pause");
 	return 0;
 }
-
