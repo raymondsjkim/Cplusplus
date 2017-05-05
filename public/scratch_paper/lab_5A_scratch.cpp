@@ -1,19 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void test_function(int a[], int a_size, int b[], int b_size)
 {
-	const int MAX = 3;
-	double values1[] = {1,2,4};
-	double values2[] = {1,2,4};
-	double values3[] = {3,2,1};
-	double values4[] = {4,5,6};
 	bool test;
-	bool test1;
-
-	for(int i = 0; i < MAX; i++)
+	for (int i = 0; i < a_size; i++)
 	{
-		if(values1[i] == values2[i])
+		if (a[i] == b[i])
 		{
 			test = true;
 		}
@@ -23,19 +16,16 @@ int main()
 		}
 	}
 	cout << test << endl;
-	cout << endl;
-	for(int j = 0; j < MAX; j++)
-	{
-		if(values3[j] == values4[j])
-		{
-			test1 = true;
-		}
-		else
-		{
-			test1 = false;
-		}
-	}
-	cout << test1 << endl;
+}
+
+int main()
+{
+	const int MAX = 3;
+	int a[MAX] = { 1,5,4 };
+	int b[MAX] = { 1,2,4 };
+
+	test_function(a, MAX, b, MAX);
+
 
 	system("pause");
 	return 0;
