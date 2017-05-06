@@ -1,24 +1,43 @@
 #include <iostream>
+#include <algorithm>
 #include <string>
 using namespace std;
 
 bool equals(int a[], int a_size, int b[], int b_size)
-{ 
-	for (int i = 0; i < a_size; i++) {
-		cout << a[i] << endl;
+{
+	
+	if (a_size == b_size)
+	{
+		for (int i = 0; i < a_size && b_size; i++)
+		{
+			if (a[i] != b[i])
+			{
+				return false;
+			}
+		}
+		return true;
 	}
-	return 0;
+	else {
+		return false;
+	}
 }
 
 int main()
 {
-	const int MAX = 3;
+	const int MAX = 100;
 	int a[MAX] = { 2, 4, 6 };
-	int b[MAX] = { 1, 3, 5 };
+	int b[MAX] = { 2, 4, 6 };
 
-	int equal = equals(a, MAX, b, MAX);
-	cout << equal << endl;
+	bool equal = equals(a, MAX, b, MAX);
 	
+	if (equal) {
+		cout << "match" << endl;
+	}
+	else
+	{
+		cout << "Not a match" << endl;
+	}
+
 	system("pause");
 	return 0;
 }
