@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #include <string>
 using namespace std;
 
@@ -25,28 +24,17 @@ bool equals(int a[], int a_size, int b[], int b_size)
 int main()
 {
 	const int MAX = 100;
-	int a[MAX];
-	int b[MAX];
-	int pos = 0;
-
-	cout << "Enter in 10 values to array a, Q to execute: " << endl;
-	int input;
-	while (cin >> input)
-	{
-		if (input < MAX)
-		{
-			a[pos] = input;
-		}
-	}
+	int a[MAX] = { 1,2,3,4,5,6,7,8,9,10 };
+	int b[MAX] = { 1,2,3,4,5,6,7,8,9,10 };
 
 	bool equal = equals(a, MAX, b, MAX);
 
 	if (equal) {
-		cout << "match" << endl;
+		cout << "They match" << endl;
 	}
 	else
 	{
-		cout << "Not a match" << endl;
+		cout << "They do not a match" << endl;
 	}
 
 	system("pause");
