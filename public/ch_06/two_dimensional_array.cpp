@@ -45,12 +45,12 @@ int main()
 			{0, 0, 1},
 			{1, 0, 0},
 			{0, 1, 1},
-			{1, 0, 1},
+			{0, 1, 1},
 			{1, 1, 0}
 		};
 
-	cout <<	"	Country     Gold     Silver     Bronze     Total" << endl;
-
+	cout <<	"        Country    Gold   Silver   Bronze   Total" << endl;
+	cout << endl;
 	// Print countries, counts, and row totals
 	for(int i = 0; i < COUNTRIES; i++)
 	{
@@ -63,7 +63,7 @@ int main()
 		int total = row_total(counts, i);
 		cout << setw(8) << total << endl;
 	}
-
+	cout << endl;
 	system("pause");
 	return 0;
 }
