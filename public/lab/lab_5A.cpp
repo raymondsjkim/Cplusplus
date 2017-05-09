@@ -72,7 +72,4 @@ int main()
 	}
 	system("pause");
 	return 0;
-
-	system("pause");
-	return 0;
 }
