@@ -25,15 +25,20 @@ int get_size(int values[], int capacity)
 	return current_size;
 }
 
+void remove_duplicates(int values[], int size)
+{
+
+}
+
 
 int main()
 {
 	const int MAX = 4;
 	int arr[MAX];
 
-	int s = get_size(arr, MAX);
+	int input_size = get_size(arr, MAX);
 
-	cout << s << " ";
+	cout << input_size << " ";
 	cout << endl;
 
 	system("pause");
