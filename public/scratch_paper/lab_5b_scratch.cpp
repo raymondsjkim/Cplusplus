@@ -27,12 +27,10 @@ int get_size(int values[], int capacity)
 
 void remove_duplicates(int values[], int size)
 {
-	for(int i = 0; i < size; i++)
-	{
-		cout << values[i] << " ";
-	}
+	/*
+		remove the duplicates in this function
+	*/
 }
-
 
 int main()
 {
