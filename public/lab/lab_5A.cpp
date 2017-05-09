@@ -31,11 +31,11 @@ bool equals(int a[], int a_size, int b[], int b_size)
 		}
 		return true; 
 	}
-	else {
+	else 
+	{
 		return false;
 	}
 }
-
 int main()
 {
 	const int MAX = 10;
