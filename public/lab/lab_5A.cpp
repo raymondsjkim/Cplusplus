@@ -8,11 +8,9 @@ Process Flow: Create two arrays with a size of 10.
 			  If they are not the same return false, else return true.
 Output Variable: Same or not the same arrays.
 */
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 using namespace std;
-
 
 /**
 Check to see if the values in the array are the same.
@@ -41,8 +39,29 @@ bool equals(int a[], int a_size, int b[], int b_size)
 int main()
 {
 	const int MAX = 10;
-	int a[MAX] = { 1,2,3,4,5,6,7,8,9,10 };
-	int b[MAX] = { 1,2,3,4,5,6,7,8,9,10 };
+	int a[MAX];
+	int b[MAX];
+	int input_a;
+	int input_b;
+	cout << "This program tests whether 10 inputs are the same or not." << endl;
+	cout << endl;
+	cout << "Enter 10 numbers for array a: ";
+	for (int i = 0; i < MAX; i++)
+	{
+		if(cin >> input_a)
+		{
+			a[i] = input_a;
+		}
+	}
+	cout << "Enter 10 numbers for array b: ";
+	for (int j = 0; j < MAX; j++)
+	{
+		if(cin >> input_b)
+		{
+			b[j] = input_b;
+		}
+	}
+	cout << endl;	
 	bool equal = equals(a, MAX, b, MAX);
 	if (equal) {
 		cout << "Both arrays are the same" << endl; // if returns true
@@ -51,6 +70,9 @@ int main()
 	{
 		cout << "Two arrays are different" << endl; // if returns false
 	}
+	system("pause");
+	return 0;
+
 	system("pause");
 	return 0;
 }
