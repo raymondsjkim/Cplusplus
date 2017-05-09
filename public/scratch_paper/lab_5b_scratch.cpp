@@ -27,7 +27,10 @@ int get_size(int values[], int capacity)
 
 void remove_duplicates(int values[], int size)
 {
-
+	for(int i = 0; i < size; i++)
+	{
+		cout << values[i] << " ";
+	}
 }
 
 
@@ -37,10 +40,9 @@ int main()
 	int arr[MAX];
 
 	int input_size = get_size(arr, MAX);
-
-	cout << input_size << " ";
+	remove_duplicates(arr, input_size);
+	
 	cout << endl;
-
 	system("pause");
 	return 0;
 }
