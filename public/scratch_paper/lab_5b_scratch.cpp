@@ -27,7 +27,17 @@ int get_size(int values[], int capacity)
 
 void remove_duplicates(int values[], int& size)
 {
-
+	int i, j; 
+	for( i = 0; i < size; i++) 
+	{ 
+		for( j = i+1; j < size; j++) 
+		{ 
+			if( values[i] == values[j] )
+			{ 
+				cout << values[i] << " "; 
+			}
+		} 
+	} 
 }
 
 int main()
