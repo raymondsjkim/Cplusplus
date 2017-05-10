@@ -8,11 +8,11 @@ int get_size(int values[], int capacity)
 	int current_size = 0;
 	cout << "Enter numbers with duplicates, Q to exit: ";
 	bool more = true;
-	while(more) 
+	while (more)
 	{
 		int input;
 		cin >> input;
-		if(cin.fail())
+		if (cin.fail())
 		{
 			more = false;
 		}
@@ -25,21 +25,19 @@ int get_size(int values[], int capacity)
 	return current_size;
 }
 
-void remove_duplicates(int values[], int size)
+void remove_duplicates(int values[], int& size)
 {
-	/*
-		remove the duplicates in this function
-	*/
+
 }
 
 int main()
 {
-	const int MAX = 4;
+	const int MAX = 6;
 	int arr[MAX];
 
 	int input_size = get_size(arr, MAX);
 	remove_duplicates(arr, input_size);
-	
+
 	cout << endl;
 	system("pause");
 	return 0;
