@@ -25,6 +25,12 @@ int read_inputs(int values[], int size)
 
 void remove_duplicates(int arr[], int& size)
 {
+	cout << endl;
+	cout << "You have inputted: ";
+	for(int z = 0; z < size; z++)
+	{
+		cout << arr[z] << " ";
+	}
 	for(int i = 0; i < size; i++)
 	{
 		for(int j = i + 1; j < size;)
@@ -47,6 +53,7 @@ void remove_duplicates(int arr[], int& size)
 
 void print(int arr[], int size)
 {
+	cout << endl;
 	cout << "New array without duplicates: ";
 	for(int i = 0; i < size; i++)
 	{
@@ -69,3 +76,4 @@ int main()
 	system("pause");
 	return 0;
 }
+
