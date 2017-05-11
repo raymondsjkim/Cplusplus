@@ -1,21 +1,20 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int read_inputs(int values[], int capacity)
+int read_inputs(int values[], int size)
 {
 	int current_size = 0;
-	cout << "Enter numbers with duplicates, Q to exit: ";
+	cout << "Enter values with duplicates, Q to exit: ";
 	bool more = true;
-	while (more)
+	while(more)
 	{
 		int input;
 		cin >> input;
-		if (cin.fail())
+		if(cin.fail())
 		{
 			more = false;
 		}
-		else if (current_size < capacity)
+		else if(current_size < size)
 		{
 			values[current_size] = input;
 			current_size++;
@@ -24,46 +23,48 @@ int read_inputs(int values[], int capacity)
 	return current_size;
 }
 
- void remove_duplicates(int arr[], int& size)
+void remove_duplicates(int arr[], int& size)
 {
-   for(int i=0;i<size;i++)
-   {
-	for(int j=i+1;j<size;)
+	for(int i = 0; i < size; i++)
 	{
-		if(arr[i]==arr[j])
+		for(int j = i + 1; j < size;)
 		{
-			for(int k=j;k<size;k++)
+			if(arr[i] == arr[j])
 			{
-				arr[k]=arr[k+1];
-
+				for(int k = j; k < size; k++)
+				{
+					arr[k] = arr[k + 1];
+				}
+				size--;
 			}
-			size--;
-		}
-		else
-		{
-			j++;
+			else 
+			{
+				j++;
+			}
 		}
 	}
-   }
 }
 
- void print(int arr[], int size)
+void print(int arr[], int size)
 {
-   for(int i=0;i<size;i++)
-   {
-      cout<<arr[i]<<"  ";
-    }
- }
+	cout << "New array without duplicates: ";
+	for(int i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+	}
+}
 
 int main()
 {
-	const int MAX = 100;
-	int arr[MAX];
-
-	int input_size = read_inputs(arr, MAX);
+	cout << "This program removes the duplicates from a set of inputs" << endl;
+	cout << endl;
+	const int CAP = 100;
+	int arr[CAP];
+	int input_size = read_inputs(arr, CAP);
 	remove_duplicates(arr, input_size);
+	cout << endl;
 	print(arr, input_size);
-
+	cout << endl;
 	cout << endl;
 	system("pause");
 	return 0;
