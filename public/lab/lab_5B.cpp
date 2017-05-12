@@ -1,5 +1,5 @@
 /*
-Description: This program removes duplicates from a set of inputs 
+Description: This program removes duplicates from a set of inputs
 and prints out a new array without duplicates.
 Author: Raymond Kim
 Inputs Variables: CAP, arr[], input_size, current_size, more, input.
@@ -13,10 +13,10 @@ Output Variables: Updated array without duplicates.
 #include <iostream>
 using namespace std;
 /**
-	Reads and returns the size of the inputs.
-	@param values an array containing integers.
-	@param capacity the maximum size of the array.
-	@return the number of inputs that are stored in the array.
+Reads and returns the size of the inputs.
+@param values an array containing integers.
+@param capacity the maximum size of the array.
+@return the number of inputs that are stored in the array.
 */
 int read_inputs(int values[], int capacity)
 {
@@ -40,41 +40,42 @@ int read_inputs(int values[], int capacity)
 	return current_size;
 }
 /**
-	Locate duplicates, remove them, and update the size.
-	@param arr[] the array from input
-	@param size the current count of the inputs
+Locate duplicates, remove them, and update the size.
+@param arr[] the array from input
+@param size the current count of the inputs
 */
 void remove_duplicates(int arr[], int& size)
 {
 	cout << endl;
+	// print out the user input
 	cout << "You have inputted: ";
-	for (int z = 0; z < size; z++)
+	for (int z = 0; z < size; z++) 
 	{
 		cout << arr[z] << " ";
 	}
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++) // initial loop through the array
 	{
-		for (int j = i + 1; j < size;)
+		for (int j = i + 1; j < size;) // loop through and check if there are duplicates
 		{
-			if (arr[i] == arr[j])
+			if (arr[i] == arr[j]) // if there are duplicates
 			{
-				for (int k = j; k < size; k++)
+				for (int k = j; k < size; k++) 
 				{
-					arr[k] = arr[k + 1];
+					arr[k] = arr[k + 1]; // replace the duplicate index with the index after it
 				}
-				size--;
+				size--; // decrement and update the size of the array
 			}
 			else
 			{
-				j++;
+				j++; // else keep looping throungh until duplicate is found
 			}
 		}
 	}
 }
 /**
-	Prints out the new array
-	@param arr[] the inputs without duplicates
-	@param size updated count of inputs
+Prints out the new array
+@param arr[] the inputs without duplicates
+@param size updated count of inputs
 */
 void print(int arr[], int size)
 {
