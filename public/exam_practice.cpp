@@ -4,33 +4,26 @@
 #include <algorithm>
 using namespace std;
 
-/* 
-change name functuion bool same_elements 
-@param a[], b[], and size. delete b_size.
-*/
-bool same_set(int a[], int a_size, int b[], int b_size)
+bool same_elements(int a[], int b[], int size)
 {
-	sort(a, a + a_size);
-	sort(b, b + b_size);
-	if (a_size == b_size)
-	{
-		for (int i = 0; i < a_size && b_size; i++)
+	sort(a, a + size);
+	sort(b, b + size);
+
+		for (int i = 0; i < size; i++)
 		{
 			if (a[i] != b[i]) 
 			{
 				return false;
 			}
+			else
+			{
+				return true;
+			}
 		}
-		return true;
-	}
-	else
-	{
-		return false;
-	}
 }
 int main()
 {
-	const int MAX = 9;
+	const int MAX = 5;
 	int a[MAX];
 	int b[MAX];
 	int input_a;
@@ -53,10 +46,7 @@ int main()
 		}
 	}
 	cout << endl;
-	/*
-		change arguments to (a,b,MAX);
-	*/
-	bool same = same_set(a, MAX, b, MAX);
+	bool same = same_elements(a,b, MAX);
 	if (same) {
 		cout << "TRUE: Both unsorted arrays have the same muliplicities" << endl; // if returns true
 	}
