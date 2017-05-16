@@ -23,3 +23,16 @@ int main()
 	system("pause");
     return 0;
 }
+
+/*
+	Access all values
+	
+	for (int i = 0; i < COUNTRIES; i++)
+	{
+		for (int j = 0; j < MEDALS; j++)
+		{
+			cout << setw(4) << counts[i][j];
+		}
+		cout << endl;
+	}
+*/
