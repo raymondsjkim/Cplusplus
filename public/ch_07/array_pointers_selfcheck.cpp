@@ -38,3 +38,11 @@ int main()
 	// output: 2 3 5
 
 */
+
+/*
+	int a[] = {2,3,5};
+	
+	cout << *a + 2 << " ";
+	cout << *(a + 2) << endl;
+	// output: 4 5
+*/
