@@ -25,4 +25,17 @@ int main()
 	*p = *q;
 
 	cout << a << " " << b << endl; // output: 2 2
+	
+	
+	
+	int a = 15;
+	int* p = &a;
+	int* q = &a;
+
+	*q = *q + 10;
+
+	cout << *p << endl; // output: 25
+	
+	
+	
 */
