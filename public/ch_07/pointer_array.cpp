@@ -21,3 +21,14 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
+
+
+/*
+	int a[10] = { 0,1,4,9,16,25,36,49,64,81 };
+	int* p = a;
+	cout << *(p + 8) << endl; // output: 64
+
+
+*/
