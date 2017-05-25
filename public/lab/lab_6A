@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int read_inputs(double arr[], int size)
+{
+	int current_size = 0;
+	double input;
+	cout << "Please enter 10 values to be in the array, Enter Q to execute the program: ";
+	bool more = true;
+	while (more)
+	{
+		cin >> input;
+		if (cin.fail())
+		{
+			more = false;
+		}
+		else if (current_size < size)
+		{
+			arr[current_size] = input;
+			current_size++;
+		}
+	}
+	return current_size;
+}
+
+void reverse(double* a, int size)
+{
+
+}
+
+int main()
+{
+	const int CAP = 5;
+	double myArr[CAP];
+
+	double size = read_inputs(myArr, CAP);
+	reverse(myArr, size);
+
+	system("pause");
+    return 0;
+}
