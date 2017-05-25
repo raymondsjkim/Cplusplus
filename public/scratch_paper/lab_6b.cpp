@@ -1,49 +1,32 @@
+#include "stdafx.h"
 #include <iostream>
 using namespace std;
 
-	const int CAP = 10;
-	double first_arr[CAP];
-
-int read_inputs(double arr[], int capacity)
-{
-	int current_size = 0;
-	double input;
-	cout << endl;
-	cout << "Enter inputs, Q to execute: ";
-	bool more = true;
-	while (more)
-	{
-		cin >> input;
-		if (cin.fail())
-		{
-			more = false;
-		}
-		else if (current_size < capacity)
-		{
-			arr[current_size] = input;
-			current_size++;
-		}
-	}
-	return current_size;
-}
 int* read_data(int& size)
 {
+	// two arrays will be in here
 
-	for(int i = 0; i < size; i++)
-	{
-		cout << first_arr[i] << endl;
-	}
 
+	// read input
+	// fill up array_ptr
+	// find out the size array_ptr[i]
+
+	// if size > MAX allocate a new array
+	// int* bigger_array = new int[2 * size] p.326
+	// copy first_array to bigger_array p.326
+	// continue to read & fill the bigger_array p.326
+	// end if 
+		// delete[] first_array
+	// print bigger_array
 }
+
+
 int main()
 {
+	const int MAX = 10;
+	double first_array[MAX];
 
-
-	int size = read_inputs(first_arr,CAP);
-	int* new_size = read_data(size);
-	
-
-	
+	int* array_ptr = new int[MAX];
 
 	system("pause");
 	return 0;
