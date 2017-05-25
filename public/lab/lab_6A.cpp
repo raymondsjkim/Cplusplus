@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 int read_inputs(double arr[], int size)
@@ -24,19 +22,36 @@ int read_inputs(double arr[], int size)
 	}
 	return current_size;
 }
-
 void reverse(double* a, int size)
 {
+	double* beg_arr_pointer = a;
+	double* end_pointer = beg_arr_pointer + size - 1;
+	while (beg_arr_pointer< end_pointer)
+	{
+		double temp = *beg_arr_pointer;
+		*beg_arr_pointer = *end_pointer;
+		*end_pointer = temp;
+		beg_arr_pointer++;
+		end_pointer--;
+	}
 
 }
-
+void print(double a[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+}
 int main()
 {
-	const int CAP = 5;
+	const int CAP = 1000;
 	double myArr[CAP];
 
 	double size = read_inputs(myArr, CAP);
 	reverse(myArr, size);
+	print(myArr, size);
 
 	system("pause");
     return 0;
