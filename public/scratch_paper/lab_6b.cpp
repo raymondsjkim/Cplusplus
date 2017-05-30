@@ -2,43 +2,51 @@
 #include <iostream>
 using namespace std;
 
-int* read_data(int& size)
-{
-	int temp_size = 10;
-	int* temp = new int[temp_size];
-	size = 0;
-	int input = 0;
-	while (cin >> input)
-	{
-		temp[size] = input;
-		size++;
-		if (size == temp_size)
-		{
-			int* new_temp = new int[temp_size * 2];
-			for (int i = 0; i < temp_size; i++)
-			{
-				new_temp[i] = temp[i];
-			}
-			temp_size = temp_size * 2;
-			delete[] temp;
-		}
-	}
-	return temp;
-}
-
+double* read_data(int& size);
 int main()
 {
-	int size;
-	int* values;
-	cout << "Enter: ";
-	values = read_data(size);
-	cout << "The inputs are: ";
+	int size = 0;
+	double* first_index = read_data(size);
+	double* added_index = new double[size];
 	for (int i = 0; i < size; i++)
 	{
-		cout << values[i] << " ";
+		added_index[i] = first_index[i];
 	}
+	for (int i = 0; i < size; i++)
+	{
+		cout << added_index[i] << " ";
+	}
+	delete[] added_index;
+	delete[] first_index;
 	cout << endl;
-
 	system("pause");
-    return 0;
+	return 0;
+}
+double* read_data(int& size)
+{
+	double input;
+	int init_size = 10;
+	double *first_array = new double[init_size];
+
+	cout << "Enter in values in to an array, Q to quit : ";
+	while (cin >> input)
+	{
+		first_array[size] = input;
+		size++;
+		if (size >= init_size)
+		{
+			init_size *= 2;
+
+			double* end_array = new double[init_size];
+
+			for (int i = 0; i<size; i++)
+			{
+				end_array[i] = first_array[i];
+			}
+
+			delete[] first_array;
+			first_array = end_array;
+		}
+	}
+	return first_array;
 }
