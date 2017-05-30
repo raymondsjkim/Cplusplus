@@ -1,75 +1,61 @@
 /*
-Description: This program checks whether two arrays have the same elements in order.
+Description: This program reads a sequence of numbers, doubles the size of inputs if users input is larger than the set size, and prints them out.
 Author: Raymond Kim
-Input Variables: MAX, a[MAX], b[MAX], equal
-Process Flow: Create two arrays with a size of 10.
-			  Create a funtion equals() with 4 parameters for 2 arrays and 2 sizes.
-			  If the size of the array are the same check if the values in the array are not the same.
-			  If they are not the same return false, else return true.
-Output Variable: Same or not the same arrays.
+Input Variables: input, init_size, *first_array, *end_array, size, *first_index, *added_index
+Process Flow: Take in user input, get the size from user input, if the size of user input is larger than the initial size, double initial size.
+Copy the first array into the end array, delete the first array values and set the first array equal to end array. Print the new array.
+Output Variable: New array with a different length.
 */
+
+#include "stdafx.h"
 #include <iostream>
-#include <string>
 using namespace std;
 
-/**
-Check to see if the values in the array are the same.
-@param a and b arrays containing numbers
-@param a_size and b_size the capacity of the arrays
-return true if the array is the same else return false.
-*/
-bool equals(int a[], int a_size, int b[], int b_size)
+double* read_data(int& size)
 {
-	if (a_size == b_size) // continue if the array size is the same else return false
+	double input;
+	int init_size = 10;
+	double* first_array = new double[init_size];
+
+	cout << "Enter in values in to an array, Q to quit : ";
+	while (cin >> input)
 	{
-		for (int i = 0; i < a_size && b_size; i++)
+		first_array[size] = input;
+		size++;
+		if (size >= init_size)
 		{
-			if (a[i] != b[i]) // if a value does not match return false
+			init_size *= 2;
+
+			double* end_array = new double[init_size];
+
+			for (int i = 0; i<size; i++)
 			{
-				return false;
+				end_array[i] = first_array[i];
 			}
+
+			delete[] first_array;
+			first_array = end_array;
 		}
-		return true; 
 	}
-	else 
-	{
-		return false;
-	}
+	return first_array;
 }
 int main()
 {
-	const int MAX = 10;
-	int a[MAX];
-	int b[MAX];
-	int input_a;
-	int input_b;
-	cout << "This program tests whether 10 inputs are the same or not." << endl;
+	int size = 0;
+	double* first_index = read_data(size);
+	double* added_index = new double[size];
+	for (int i = 0; i < size; i++)
+	{
+		added_index[i] = first_index[i];
+	}
+	for (int i = 0; i < size; i++)
+	{
+		cout << added_index[i] << " ";
+	}
+	delete[] added_index;
+	delete[] first_index;
 	cout << endl;
-	cout << "Enter 10 numbers for array a: ";
-	for (int i = 0; i < MAX; i++)
-	{
-		if(cin >> input_a)
-		{
-			a[i] = input_a;
-		}
-	}
-	cout << "Enter 10 numbers for array b: ";
-	for (int j = 0; j < MAX; j++)
-	{
-		if(cin >> input_b)
-		{
-			b[j] = input_b;
-		}
-	}
-	cout << endl;	
-	bool equal = equals(a, MAX, b, MAX);
-	if (equal) {
-		cout << "Both arrays are the same" << endl; // if returns true
-	}
-	else
-	{
-		cout << "Two arrays are different" << endl; // if returns false
-	}
 	system("pause");
 	return 0;
 }
+
