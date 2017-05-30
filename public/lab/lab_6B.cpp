@@ -11,11 +11,11 @@ Output Variable: New array with a different length.
 #include <iostream>
 using namespace std;
 /**
-	Read input, get the size, if size of input is greater than initial size, 
-	double the initial size, allocate a heap array, copy the elements fron first 
-	array to end array, and deallocate the first array.
-	@param size the number of inputs supplied from the user
-	return first_array the first index of the array
+Read input, get the size, if size of input is greater than initial size,
+double the initial size, allocate a heap array, copy the elements fron first
+array to end array, and deallocate the first array.
+@param size the number of inputs supplied from the user
+return first_array the first index of the array
 */
 double* read_data(int& size)
 {
@@ -46,7 +46,7 @@ double* read_data(int& size)
 }
 int main()
 {
-	cout << "This program copies a smaller array into a bigger array if the size of the smaller array is greater than the initial size using dynamic memory allocation. " << endl;
+	cout << "This program copies a smaller array into a bigger array if the size of the smaller array is greater than the initial\nsize using dynamic memory allocation. " << endl;
 
 	// initial size of array
 	int size = 0;
