@@ -2,26 +2,6 @@
 #include <iostream>
 using namespace std;
 
-double* read_data(int& size);
-int main()
-{
-	int size = 0;
-	double* first_index = read_data(size);
-	double* added_index = new double[size];
-	for (int i = 0; i < size; i++)
-	{
-		added_index[i] = first_index[i];
-	}
-	for (int i = 0; i < size; i++)
-	{
-		cout << added_index[i] << " ";
-	}
-	delete[] added_index;
-	delete[] first_index;
-	cout << endl;
-	system("pause");
-	return 0;
-}
 double* read_data(int& size)
 {
 	double input;
@@ -49,4 +29,23 @@ double* read_data(int& size)
 		}
 	}
 	return first_array;
+}
+int main()
+{
+	int size = 0;
+	double* first_index = read_data(size);
+	double* added_index = new double[size];
+	for (int i = 0; i < size; i++)
+	{
+		added_index[i] = first_index[i];
+	}
+	for (int i = 0; i < size; i++)
+	{
+		cout << added_index[i] << " ";
+	}
+	delete[] added_index;
+	delete[] first_index;
+	cout << endl;
+	system("pause");
+	return 0;
 }
