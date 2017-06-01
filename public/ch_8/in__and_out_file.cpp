@@ -19,7 +19,10 @@ int main()
 	
 	ofstream out_file;
 	out_file.open("s:\\output.txt");
-
+	if (out_file.fail())
+	{
+		return 0;
+	}
 
 	while(in_file >> name >> value)
 	{
