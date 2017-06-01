@@ -27,7 +27,7 @@ int main()
 {
 
 	ifstream in_file;
-	in_file.open("c:\\babynames.txt");
+	in_file.open("C:\\Users\\raymo\\OneDrive\\Documents\\babynames.txt");
 
 	if (in_file.fail())
 	{
