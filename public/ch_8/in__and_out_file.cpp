@@ -4,7 +4,9 @@
 #include <string>
 
 using namespace std;
-
+/*
+	This program copies data from input.txt to output.txt
+*/
 int main()
 {
 	string name;
@@ -28,8 +30,6 @@ int main()
 	{
 		out_file << name << " " << value << endl;
 	}
-
-
 	system("pause");
 	return 0;
 }
