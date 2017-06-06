@@ -1,7 +1,7 @@
 /*
 Description: This program processes 50 percent of common boy and girl names from babynames.txt into output.txt
 Author: Raymond Kim
-Input Variables: name, count, percent, in_file, out_file, total, boy_total, girl_total, rank
+Input Variables: name, count, percent, in_file, out_file, total, boy_total, girl_total, rank, names_total
 Process Flow: Open input stream and output stream, while girl and boy total is greater than 0,
 process the name, count, and percent from babynames.txt to output.txt, adjust the total.
 Output Variable: 50 percent of the common boy and girl names.
@@ -31,20 +31,21 @@ void process_name(ifstream& in_file, ofstream& out_file, double& total)
 }
 int main()
 {
+	int names_total = 0;
 	// Define the input and output streams
 	ifstream in_file;
 	ofstream out_file;
 	// open the input stream
-	in_file.open("f:\\babynames.txt");
+	in_file.open("s:\\babynames.txt");
 	if (in_file.fail()) // check for failure after opening
 	{
 		return 0;
 	}
 	// open output stream
-	out_file.open("f:\\output.txt");
+	out_file.open("s:\\output.txt");
 	double boy_total = 50;
 	double girl_total = 50;
-	cout << "Starting of analysis.";
+	cout << "Starting of analysis." << endl;
 	// process frequencies until it reaches 50 percent
 	while (boy_total > 0 || girl_total > 0)
 	{
@@ -56,12 +57,14 @@ int main()
 		}
 		else
 		{
+			names_total++;
 			process_name(in_file, out_file, boy_total);
 			process_name(in_file, out_file, girl_total);
-			cout << endl;
 		}
 	}
+	cout << "Total number of names: " << names_total << endl;
 	cout << "End of analysis." << endl;
+	cout << endl;
 	system("pause");
 	return 0;
 }
