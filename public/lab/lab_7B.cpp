@@ -41,3 +41,23 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
+/*
+	Simple avg function (PUT IN MAIN)
+
+	double n = 0;
+	double sum = 0, total = 0;
+
+	fstream file("f:\\data.txt");
+	while (file >> n) // or while(cin >> n) to read from stdin, commandline
+	{
+		sum += n;
+		total++;
+	}
+
+	double average = sum / total;
+
+	cout << "sum: " << sum << endl;
+	cout << "average: " << average << endl;
+*/
