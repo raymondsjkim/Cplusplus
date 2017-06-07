@@ -52,14 +52,13 @@ int main()
 #include <fstream>
 #include <string>
 using namespace std;
-int main()
+void get_avg(ifstream& in_file)
 {
-	fstream file("e:\\data.txt");
 	double n = 0;
 	double x = 0;
 	double sum = 0, sum2 = 0, total = 0;
 	cout << setw(14) << "Column 1" << setw(5) << " " << "Column 2" << endl;
-	while (file >> n >> x)
+	while (in_file >> n >> x)
 	{
 		cout << setw(12) << n << " " << setw(12) << x << endl;
 		sum = sum + n;
@@ -71,6 +70,17 @@ int main()
 	cout << endl;
 	cout << "Average " << average << setw(10) << " " << avg2 << endl;
 	cout << endl;
+}
+int main()
+{
+	ifstream in_file;
+	in_file.open("e:\\data.txt");
+	if (in_file.fail())
+	{
+		cout << "In_file has failed" << endl;
+		return 0;
+	}
+	get_avg(in_file);
 	system("pause");
     return 0;
 }
