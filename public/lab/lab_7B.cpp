@@ -55,11 +55,9 @@ using namespace std;
 int main()
 {
 	fstream file("e:\\data.txt");
-	
 	double n = 0;
 	double x = 0;
 	double sum = 0, sum2 = 0, total = 0;
-	
 	cout << setw(14) << "Column 1" << setw(5) << " " << "Column 2" << endl;
 	while (file >> n >> x)
 	{
@@ -68,15 +66,11 @@ int main()
 		sum2 = sum2 + x;
 		total++;
 	}
-	
 	double average = sum / total;
 	double avg2 = sum2 / total;
-	
-	cout << "sum: " << sum << endl;
-	cout << "average: " << average << endl;
-	cout << "sum2: " << sum2 << endl;
-	cout << "avg2: " << avg2 << endl;
-	
+	cout << endl;
+	cout << "Average " << average << setw(10) << " " << avg2 << endl;
+	cout << endl;
 	system("pause");
     return 0;
 }
