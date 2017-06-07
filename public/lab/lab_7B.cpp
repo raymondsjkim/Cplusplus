@@ -46,18 +46,35 @@ int main()
 /*
 	Simple avg function (PUT IN MAIN)
 
-	double n = 0;
-	double sum = 0, total = 0;
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main()
+{
 
+	double n = 0;
+	double x = 0;
+	double sum = 0, sum2 = 0, total = 0;
 	fstream file("f:\\data.txt");
-	while (file >> n) // or while(cin >> n) to read from stdin, commandline
+	while (file >> n >> x) // or while(cin >> n) to read from stdin, commandline
 	{
+		cout << n << " " << x << endl;
 		sum += n;
+		sum2 += x;
 		total++;
 	}
-
 	double average = sum / total;
+	double avg2 = sum2 / total;
 
 	cout << "sum: " << sum << endl;
 	cout << "average: " << average << endl;
+
+	cout << "sum2: " << sum2 << endl;
+	cout << "avg2: " << avg2 << endl;
+
+	system("pause");
+    return 0;
+}
 */
