@@ -46,23 +46,24 @@ int main()
 /*
 	Simple avg function (PUT IN MAIN)
 
-
+/*
 Description: This program opens a file from a user input and calculates the average of each data column.
 Author: Raymond Kim
 Input Variables: col1, col2, sum1, sum2, count, avg1, avg2, filename, in_file
 Process Flow: Open file provided by the user. Calculate the sum of each column and get 
 the average of each. Print the columnn and the averages of each.
 Output Variable: Data table with the calculated averages.
-
+*/
 #include "stdafx.h"
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <string>
 using namespace std;
+/**
 	Sums each column and calculates the average of each column.
 	@param in_file the input stream
-
+*/
 void get_avg(ifstream& in_file)
 {
 	double col1 = 0; // column1
