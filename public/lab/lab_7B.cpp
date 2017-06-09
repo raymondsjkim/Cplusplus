@@ -1,7 +1,8 @@
 /*
-Description: This program opens a file from a user input and calculates the average of each data column.
+Description: This program opens a file from a user input and calculates the average of each data column
+and displays a table in the out_file.
 Author: Raymond Kim
-Input Variables: col1, col2, sum1, sum2, count, avg1, avg2, filename, in_file
+Input Variables: col1, col2, sum1, sum2, count, avg1, avg2, filename, in_file, out_file.
 Process Flow: Open file provided by the user. Calculate the sum of each column and get
 the average of each. Print the columnn and the averages of each.
 Output Variable: Data table with the calculated averages.
@@ -13,8 +14,9 @@ Output Variable: Data table with the calculated averages.
 #include <string>
 using namespace std;
 /**
-Sums each column and calculates the average of each column.
+Sums each column and calculates the average of each column and displays table in output file.
 @param in_file the input stream
+@param out_file the output stream
 */
 void get_avg(ifstream& in_file, ofstream& out_file)
 {
@@ -51,7 +53,7 @@ int main()
 		system("pause");
 		return 0;
 	}
-	out_file.open("f:\\data_out.txt");
+	out_file.open("f:\\data_out.txt"); // open out_file
 	cout << endl;
 	cout << "Start of analysis.";
 	get_avg(in_file, out_file); // call the get_avg function
